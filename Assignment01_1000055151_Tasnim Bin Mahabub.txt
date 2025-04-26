@@ -1,0 +1,384 @@
+//task10
+public class t10
+{   
+     public static void main(String[] args) 
+     {
+       //a
+         int hungry ;//valid because it follows all the rules for identifiers
+       //b
+         int 2AB ;//invalid because can't begin with a number
+       //c
+         int 312.2 ;//invalid because can't hold a dot and can't begin with a number
+       //d
+         int MOBILE ;//valid because it's not case sensitive
+       //e
+         int "Ans" ;//invalid because double quotation(" ")is used for string
+       //f 
+         int $30 ;//valid because it can begin with dollar sign($)
+       //g
+         int Yes/No ;//invalid because cannot contain a forward slash (/). 
+ 
+       //h
+         int student-id ;//invalid because cannot contain a hyphen
+ 
+       //i
+         int A+3 ;//invalid because can't hold addition sign(+) as a special character
+       //j
+         int 'X' ;//invalid because single quotes (‘’) is used for characters
+ 
+       //k  
+         int return ;//invalid because "return" is a java reserved keyword
+     }
+}
+                         
+
+
+
+
+//task11
+public class t11
+{   
+     public static void main(String[] args) 
+     {
+       //2.1
+       
+       
+       int num1 =10;
+       //output
+        System.out.println(num1);
+//after compiling and running the printed value is 10,that means the value has been stored properly
+        
+        
+       //2.2
+        
+        
+        int num2 =5;
+        //output
+        System.out.println(num1+num2);
+//after compiling and running the addition is 15 and 10+5=15,that means the addition has been done correctly
+
+        
+        //2.3
+        
+        
+        //output
+        System.out.println(num1*num2);
+//after compiling and running the product is 50 and 10x5=50,that means the multiplication has been done correctly
+        System.out.println(num1/num2);
+//after compiling and running the division is 2 and 10/5=2,that means the division has been done correctly
+
+        
+        //2.4
+        
+        
+        double num3 =10;
+        double num4 =5;
+        
+        //output
+        System.out.println(num3);
+//after compiling and running the printed value is 10,that means the value has been stored properly
+     //because of using data type double the printed value is 10.0 instead of 10    
+        System.out.println(num3+num4);
+        /*after compiling and running the addition is 15 and 10+5=15,that means the addition has been done correctly.
+         because of using data type double the printed value is 15.0 instead of 15 */
+        System.out.println(num3*num4);
+        /*after compiling and running the product is 50 and 10x5=50,that means the multiplication has been done correctly
+         because of using data type double the printed value is 50.0 instead of 50 */
+        System.out.println(num3/num4);
+        /*after compiling and running the division is 2 and 10/5=2,that means the division has been done correctly
+         because of using data type double the printed value is 2.0 instead of 2 */
+        
+        
+        
+        //2.5
+        
+        
+        
+        double num5 =10;
+        int num6 =5;
+        
+        //output
+        System.out.println(num5);
+//after compiling and running the printed value is 10,that means the value has been stored properly
+     //because of using data type double the printed value is 10.0 instead of 10
+        System.out.println(num5+num6);
+        /*after compiling and running the addition is 15 and 10+5=15,that means the addition has been done correctly.
+         because of using one of the data type double the printed value is 15.0 instead of 15 */
+        System.out.println(num5*num6);
+        /*after compiling and running the product is 50 and 10x5=50,that means the multiplication has been done correctly
+         because of using one of the data type double the printed value is 50.0 instead of 50 */
+        System.out.println(num5/num6);
+        /*after compiling and running the division is 2 and 10/5=2,that means the division has been done correctly
+         because of using one of the data type double the printed value is 2.0 instead of 2 */
+        
+        
+        //2.6
+        
+        
+        
+        //String num7 =10;
+        //String num8 =5;
+        //for integar values we can't use string as a datatype. its not compliable 
+        
+        
+        /*addition operator add strings without any space .example:
+         String firstName ="tasnim";
+         String lastName ="bin";
+         System.out.println(firstName+lastName);
+         the printed value will be: tasnim bin(using interactions pane)   */
+        
+        
+        
+        /*if the first variable is an integer and the second is a String,
+         int num =10;
+         String name ="messi";
+        System.out.println(num+name);
+         the printed value will be: 10messi(using interactions pane) */
+        
+        
+        
+        /*if the first variable is an String and the second is a integer,
+        String name ="messi";
+         int num =10;
+         System.out.println(name+num);
+         the printed value will be: messi10(using interactions pane) */
+        
+         
+     }
+}  
+        
+        
+        
+        
+        
+        
+    
+               
+
+
+
+//task 12
+public class t12 {
+    public static void main(String[] args) {
+        double radius = 4.0;
+        
+        //circumference
+        double circumference = 2 * Math.PI * radius;
+        
+        //area
+        double area = Math.PI * radius * radius;
+        
+        //output
+        System.out.println("Circumference of the circle: " + circumference);
+        System.out.println("Area of the circle: " + area);
+    }
+}
+
+
+
+
+
+
+//task13
+public class t13
+{   
+     public static void main(String[] args) 
+     {
+       
+       int num =6251;
+         int lastTwoDigits =num%100;
+         //if we divide an integer with 100 we will get last two digits of that integer as remainder
+         
+         
+         //output
+         System.out.println(lastTwoDigits);
+     }
+}
+
+
+
+
+// task 14
+public class t14 {
+public static void main(String[] args) {
+ int inch = 1000;
+    
+    // conversion factor
+    double cf = 0.0254; // given 1 inch =0.0254 meter
+    
+    // inches to meters
+    double meters = inch*cf;
+    
+    // output
+    System.out.println("result :"+meters+" meter");
+
+
+ 
+}
+}
+
+
+
+
+// task 15(a)
+public class t15a {
+public static void main(String[] args) {
+int a=10;
+int b=20;
+int c; //declaring a third variable for swapping;
+//output
+System.out.println("before swapping the integers were:"+a+" and "+b);
+c=a;
+a=b;
+b=c;
+//output
+
+System.out.println("after swapping the integers are:"+a+" and "+b);
+
+
+}
+}        
+        
+        
+        
+// task 15(b)
+public class t15b{
+public static void main(String[] args) {
+int a=10;
+int b=20;
+
+//output
+System.out.println("before swapping the integers were:"+a+" and "+b);
+
+// without declaring a third variable for swapping;
+a=a+b; // a=a+b means a is now 30
+b=a-b; // b=a-b means b is now (30-20)=10
+a=a-b; // a=a-b means a is now (30-10)=20
+//output
+
+System.out.println("after swapping the integers are:"+a+" and "+b);
+
+
+}
+}        
+
+
+
+
+
+//task 16
+public class t16 {
+    public static void main(String[] args) {
+
+
+        // given minutes
+        int min = 3456789;
+        
+        // conversion
+        int minPerDay = 60 * 24;
+        int minPerYear = minPerDay * 365;
+        
+        // years
+        int years = min / minPerYear;
+        
+        // remaining minutes
+        int remainingMin = min % minPerYear;
+        
+        // days
+        int days = remainingMin / minPerDay;
+        
+        // output 
+        System.out.println(min + " minutes is approximately " + years + " years and " + days + " days.");
+    }
+}
+    
+       
+
+
+//task17
+public class t17 {
+    public static void main(String[] args) {
+      int a=2;
+      int b=5;
+      int c=8;
+      int d=((2*b*((c-a)/3))+7); //(2xbx((c-a)/3))+7
+        
+        //output
+        System.out.println("The answer is:"+d);
+    }
+}
+
+
+
+
+//task18
+public class t18{
+    public static void main(String[] args) {
+        //student ID
+        int studentID = 1000055151;
+        
+        
+        
+        
+        //last 2 digits of the ID
+        int lastTwoDigits = studentID % 100;
+        
+        
+        
+        
+        
+        // swapping the last 2 digits
+        int digit1 = lastTwoDigits / 10;
+        int digit2 = lastTwoDigits % 10;
+        
+        
+        // output
+        System.out.println("The 2 rightmost digits od student ID in reverse order are: " + digit2 + ", " + digit1);
+    }
+}
+
+
+
+
+
+
+
+// task 19
+public class t19 {
+public static void main(String[] args) {
+double a = 8;
+double b = 3;
+double c = Math.sqrt((a/2)*(a/2)+b*b); //applying Pythagorean theorem
+// c is the side length of the hexagon 
+    //circumference
+    double circumference = 6*c; //circumference of a Hexagon p=6xsides
+    
+    // area
+    double area = ((3 * Math.sqrt(3)*c*c)/2) ; // using formula of area=(3sqrt3c^2)/2
+    System.out.println("Circumference of Hexagon:"+circumference);
+    System.out.println("Area of Hexagon:"+area);
+    
+
+}
+}
+
+
+
+
+
+// task 20
+public class t20 {
+public static void main(String[] args) {
+  
+  double a=4.5;
+  double b=9.5;
+  double c=Math.sqrt(a*a+b*b); //applying Pythagorean theorem
+  
+  
+  
+  System.out.println("SinA="+a/c);
+  System.out.println("CosA="+b/c);
+  System.out.println("SinB="+b/c);                
+  System.out.println("CosB="+a/c);
+}
+}

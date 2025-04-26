@@ -1,0 +1,338 @@
+//task01
+
+import java.util.Scanner;
+public class a6t1{
+  public static void main(String[] args){
+    Scanner sca=new Scanner(System.in);
+    System.out.print("Enter an string:");
+    String likha=sca.nextLine();
+    String notunLikha="";
+    for(int inde=0;inde<likha.length();inde++){
+      char charec=likha.charAt(inde);
+      if(charec>='a' && charec<='z'){
+        int aski=(int)charec-32;
+        notunLikha=notunLikha+(char)aski;
+      }
+      else{
+        notunLikha=notunLikha+charec;
+      }
+    }
+    System.out.println(notunLikha);
+  }
+}
+
+
+
+
+//task02
+
+import java.util.Scanner;
+public class a6t2{
+  public static void main(String[] args){
+    Scanner sca=new Scanner(System.in);
+    System.out.print("Enter an string:");
+    String likha=sca.nextLine();
+    String ultaLikha="";
+    for(int inde=likha.length()-1;inde>=0;inde--){
+      char charec=likha.charAt(inde);
+        ultaLikha=ultaLikha+charec;
+        
+    } 
+    System.out.print(ultaLikha);
+    System.out.println();
+  }
+}
+
+
+
+
+
+
+
+
+
+//task03
+
+import java.util.Scanner;
+public class a6t3{
+  public static void main(String[] args){
+    Scanner sca=new Scanner(System.in);
+    System.out.print("Enter an string:");
+    String likha=sca.nextLine();
+    String ultaLikha="";
+    for(int inde=likha.length()-1;inde>=0;inde--){
+      char charec=likha.charAt(inde);
+        ultaLikha=ultaLikha+charec;
+        
+    } 
+    
+    System.out.print(likha.equals(ultaLikha));
+    System.out.println();
+  }
+}
+//task04
+
+import java.util.Scanner;
+
+public class a6t4 {
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    System.out.print("Enter a string: ");
+    String likha = sca.nextLine();
+    System.out.print("Enter the character to split: ");
+    char bishesh =sca.next().charAt(0) ;
+    String notunLikha = "";
+    
+    for (int inde = 0; inde <likha.length(); inde++) {
+      char charec = likha.charAt(inde);
+      if (charec == bishesh) {
+        System.out.println();
+      }
+      else{
+        System.out.print(charec);
+        
+        
+      }
+      
+    }
+    
+    
+  }
+}
+
+
+
+
+//task05
+
+import java.util.Scanner;
+public class a6t5{
+  public static void main(String arg[]){
+    Scanner sca = new Scanner(System.in);
+    System.out.print("Enter a string: ");
+    String likha=sca.nextLine();
+    int shuru=0;
+    int shesh=likha.length()-1;
+    for(int i=likha.length()-1;i>=0;i--){
+      if(likha.charAt(i)==' '){
+        shuru=i+1;
+        for(int j=shuru;j<=shesh;j++){
+          System.out.print(likha.charAt(j));
+        }
+        System.out.print(" ");
+        shesh=i-1;
+      }
+    }
+    for(int i=0;i<=shesh;i++){
+      System.out.print(likha.charAt(i));
+    }
+    
+  }
+}
+
+
+
+//task06
+
+import java.util.Scanner;
+public class a6t6{
+  public static void main(String arg[]){
+    Scanner sca = new Scanner(System.in);
+    
+    String password = sca.nextLine();
+    int conso=0; 
+    int vowe=0;
+    for(int i=0;i<password.length();i++){
+      char okkhor=password.charAt(i);
+        if(okkhor=='A'||okkhor=='E'||okkhor=='I'||okkhor=='O'||okkhor=='U'||okkhor=='a'||okkhor=='e'||okkhor=='i'||okkhor=='o'||okkhor=='u'){
+        vowe++;
+      }
+      else if(okkhor>='A'&&okkhor<='Z'||okkhor>='a'&&okkhor<='z'){
+        conso++;
+      }
+    }
+    if(vowe!=0&&conso!=0&&vowe%3==0&&conso%5==0){
+      System.out.println("Aaarr! Me Plunder!!");
+    } else {
+      System.out.println("Blimey! No Plunder!!");
+    }
+    
+  }
+}
+
+
+
+
+//task7
+import java.util.Scanner;
+
+public class a6t7 {
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    
+    System.out.println("Enter both strings in lowercase: ");
+    String likha1 = sca.next();
+    String likha2 = sca.next();
+    
+    boolean ekbar=true;
+    
+    
+    for (int i = 0; i < likha1.length(); i++) {
+      ekbar=true;
+      for (int j = 0; j < likha2.length(); j++) {
+        if (likha1.charAt(i) == likha2.charAt(j)) {
+          ekbar = false;
+          break;
+        }
+      }
+      if (ekbar==true) {
+        System.out.print((char)(likha1.charAt(i)-32));
+      }
+    }
+    
+    
+    for (int i = 0; i < likha2.length(); i++) {
+      ekbar=true;
+      for (int j = 0; j < likha1.length(); j++) {
+        if (likha2.charAt(i) == likha1.charAt(j)) {
+          ekbar = false;
+          break;
+        }
+      }
+      if (ekbar==true) {
+        System.out.print((char)(likha2.charAt(i)-32));
+      }
+    }
+    
+  }
+}
+
+
+//task08
+
+import java.util.Scanner;
+public class a6t8{
+  public static void main(String[] args){
+    Scanner sca=new Scanner(System.in);
+    System.out.print("Enter an string:");
+    String likha=sca.nextLine();
+    String notunLikha="";
+    //making sure that new sentence will always start with lowercase letters
+    if(likha.charAt(0)>='A' && likha.charAt(0)<='Z'){
+        int aski=(int)likha.charAt(0)+32;
+        notunLikha=notunLikha+(char)aski;
+      }
+    else{
+      notunLikha=notunLikha+(char)likha.charAt(0);
+    }
+    //loop from 2nd letter
+    for(int inde=1;inde<likha.length();inde++){
+      char charec=likha.charAt(inde);
+      
+      if(charec>='a' && charec<='z'){
+        int aski=(int)charec-32;
+        notunLikha=notunLikha+(char)aski;
+      }
+      else if(charec>='A' && charec<='Z'){
+        int aski=(int)charec+32;
+        notunLikha=notunLikha+(char)aski;
+      }
+      else{
+        notunLikha=notunLikha+charec;
+      }
+    }
+    System.out.println(notunLikha);
+  }
+}
+
+
+
+
+
+//task09
+
+import java.util.Scanner;
+class a6t9 {
+  public static void main(String arg[]) {
+    Scanner sca = new Scanner(System.in);
+    System.out.print("Enter your password: ");
+    String passWord = sca.nextLine();
+    boolean upperAse = false;
+    boolean lowerAse = false;
+    boolean digitAse = false;
+    boolean specialAse = false;
+    for (int i = 0; i < passWord.length(); i++) {
+      char okkhor = passWord.charAt(i);
+      if (okkhor >= 'A' && okkhor <= 'Z') {
+        upperAse = true;
+      } else if (okkhor >= 'a' && okkhor <= 'z') {
+        lowerAse = true;
+      } else if (okkhor >= '0' && okkhor <= '9') {
+        digitAse = true;
+      } else {
+        specialAse = true;
+      }
+    }
+    
+    if (passWord.length() >= 8 && upperAse == true && lowerAse == true && digitAse == true && specialAse == true) {
+      System.out.println("True");
+    } else {
+      System.out.println("False");
+    }
+    
+    
+  }
+}
+
+
+//task 10
+
+import java.util.Scanner;
+
+public class a6t10 {
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    
+    
+    System.out.print("Enter your first name: ");
+    String nam = sca.nextLine();
+    System.out.print("Enter your email's password: ");
+    String passWord = sca.nextLine();
+    
+    boolean validNaki = false;
+    
+    
+    for (int i = 0; i <= passWord.length() - nam.length(); i++) {
+      boolean ekoi = true;
+      for (int j = 0; j < nam.length(); j++) {
+        if (passWord.charAt(i + j) != nam.charAt(j)) {
+          ekoi = false;
+          break;
+        }
+      }
+      if (ekoi==true) {
+        validNaki = true;
+        break;
+      }
+    }
+    
+    
+    if (validNaki==true) {
+      System.out.println("Invalid");
+    } else {
+      System.out.println("Valid");
+    }
+    
+    
+  }
+}
+
+
+
+
+
+
+
+
+
+

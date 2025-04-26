@@ -1,0 +1,384 @@
+//task01
+
+import java.util.Scanner;
+
+public class t01 {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    System.out.print("Enter a positive integer:");
+    int n= sc.nextInt();
+    
+    
+    
+    //prime number
+    int num=2;
+    int count=0;
+    
+    //loop1
+    while (count < n) {
+      boolean prime = true;
+      
+      
+      
+      // checking prime number
+      //loop2
+      for (int i = 2; i <=Math.sqrt(num); i++) {
+        if (num % i == 0) {
+          prime = false;
+          break;
+        }
+      }
+      //loop2 ends
+      
+      
+      
+      
+      
+      if (prime==true) {
+        System.out.println(num);
+        count++;
+      }
+      
+      num++; // moving to next number
+    }
+  }
+}
+//loop1 ends
+    
+
+
+
+
+
+
+
+
+//task 02
+
+import java.util.Scanner;
+
+public class t02 {
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    
+    
+//entering value of N  
+    System.out.println("if the expression of y is as follows: ");
+    System.out.println(" y = -(1) -(1+2) -(1+2+3) - . . . .-(1+2+3+ . . . +N)");
+    System.out.print("enter the value of N: ");
+    int n = sca.nextInt();
+    
+    
+    
+    int y=0;
+    
+    //outer loop for counting the sum
+    
+    for (int i = 1; i <= n; i++) {
+      int sum = 0;
+      
+      //inner loop for sum
+      for (int j = 1; j <= i; j++) {
+        sum += j;
+      }
+      //inner loop ends
+      y -= sum;
+    }
+    //outer loop ends
+    
+    // Output
+    System.out.println("The value of y: " + y);
+    
+    
+  }
+}
+
+
+
+//task03
+
+
+import java.util.Scanner;
+
+public class t03 {
+  public static void main(String[] args) {
+    
+    
+    
+    
+    Scanner sca = new Scanner(System.in);
+    
+    
+    
+    
+    //loop 1 for counting divisors 
+    while(true){
+      System.out.print("Enter number:");
+      int num = sca.nextInt();
+      
+      
+      if(num%2!=0){
+        break;
+      }
+      int div=0;
+      
+      
+      
+      //loop 2 for checking divisors
+      for(int j=1;j<=num;j++){
+        
+        
+        if(num%j==0){
+          div+=1;
+        }
+      }
+      
+      
+      
+      
+      System.out.println(num+" has " +div+" divisors");
+      
+    }
+  }
+}
+
+
+
+
+//task04
+
+import java.util.Scanner;
+
+public class t04 {
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    
+    
+    
+    System.out.print("Enter the number of test cases: ");
+    int N = sca.nextInt();
+    
+    
+    
+//loop1 for taking iputs for N times
+    for (int i = 1; i <= N; i++) {
+      
+      
+      
+      System.out.print("Enter Value of X: ");
+      int x = sca.nextInt();
+      System.out.print("Enter Value of Y: ");
+      int y = sca.nextInt();
+      
+      int sum = 0;
+      int count = 0;
+      
+      // making x an odd nmber if its not
+      
+      if (x % 2 == 0) {
+        x += 1;
+      }
+      
+      
+//loop2 for adding the numbers
+      while (count <y) {
+        sum += x;
+        x += 2; //next odd number
+        count++;
+      }
+      
+      System.out.println("Sum for test case " + i + ": " + sum);
+    }
+    
+  }
+}
+
+
+
+
+
+//task05
+
+
+import java.util.Scanner;
+
+public class t05 {
+  public static void main(String[] args) {
+    
+    
+    
+    
+    Scanner sca = new Scanner(System.in);
+    
+    
+    System.out.print("Enter the length:");
+    int length = sca.nextInt();
+    
+    
+    System.out.print("Enter the width:");
+    int width = sca.nextInt();
+    
+    
+//loop 1 for column
+    for(int l=1;l<=length;l++){
+      
+      
+      //loop 2 for line    
+      for(int w=1;w<=width;w++){
+        System.out.print(w);
+      }
+      
+      
+      System.out.println();
+    }
+  }
+}
+
+
+
+//task06
+
+import java.util.Scanner;
+
+public class t06{
+  public static void main(String[] args) {
+    Scanner sca = new Scanner(System.in);
+    
+    
+    int max= -1;
+    int min=-1;
+    int sum=0;
+    int count=0;
+    System.out.print("How many inputs do you want to provide?: ");
+    int inp = sca.nextInt();
+    
+    //loop for taking inputs for inp times
+    for(int i=1;i<=inp;i++){
+      int input = sca.nextInt();
+      
+      
+      if (input > 0 && input % 2 == 0) { //to check if its even and positive number
+        sum += input;
+        count++;
+        
+        //max and min
+        if (max == -1 || input > max) {
+          max = input;
+        }
+        
+        if (min == -1 || input < min) {
+          min = input;
+        }
+      }
+    }
+    double avg=sum/count;
+    
+    if (count == 0) {//if no even positive numbers
+      System.out.println("Max:");
+      System.out.println("Min:)");
+      System.out.println("Average: 0");
+      
+    } else {
+      System.out.println("Max: " + max);
+      System.out.println("Min: " + min);
+      System.out.println("Average: " +avg);
+    }
+  }
+}
+
+
+
+
+
+
+
+//task07
+
+
+import java.util.Scanner;
+
+public class t07 {
+  public static void main(String[] args) {
+    
+    
+    
+    
+    Scanner sca = new Scanner(System.in);
+    
+    
+    
+    //infinite loop
+    while(true){
+      System.out.print("Enter number:");
+      int numb = sca.nextInt();
+      
+      
+      if(numb<0){
+        break;
+      }
+      
+      System.out.println(numb+"^2="+numb*numb);
+    }
+  }
+}
+
+
+
+
+
+//task 08
+
+
+import java.util.Scanner;
+public class t08 {
+  public static void main(String arg[]) {
+    Scanner sca = new Scanner(System.in);
+    
+    
+    //taking input
+    System.out.print("Enter a starting number: ");
+    int startNum=sca.nextInt();
+    System.out.print("Enter an ending number ");
+    int endNum=sca.nextInt();
+    
+    
+    
+    System.out.println("Armstrong numbers: ");
+    
+    
+    
+    //loop1 for checking in between the range
+    for(int i=startNum;i<=endNum;i++) {
+      int numb=i;
+      int digitCount=0;
+      
+      
+      //loop2 for counting digit
+      while(numb!=0) {
+        digitCount+=1;
+        numb/=10;
+      }
+      numb=i;
+      int summ=0;
+      
+      
+      
+      //loop3 for checking armstrong
+      while(numb!=0) {
+        int lastDigit = numb%10;
+        summ+=Math.pow(lastDigit,digitCount );
+        numb/=10;
+      }
+      if(summ==i) {
+        
+        System.out.println(i);
+      }
+    }
+  }
+}
+
+

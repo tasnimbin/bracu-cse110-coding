@@ -1,0 +1,359 @@
+//task01
+
+
+public class t01 {
+    public static void main(String[] args) {
+        
+
+        // example 2
+        int num1 = 5;//can be replaced with any test input
+        int num2 = 17;//can be replaced with any test input
+        int num3 = -5;//can be replaced with any test input
+       
+
+    // finding the largest number with conditional
+   
+      if (num1 >= num2 && num1 >= num3) {
+             System.out.println("The largest number is: " + num1);//output
+             
+             
+    
+       } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("The largest number is: " + num2);//output
+            
+            
+            
+        } else {
+            System.out.println("The largest number is: " + num3);//output
+//if its not num1 or num2 then it will be num3,so no condition
+        }
+        
+    }
+}
+
+
+
+
+// task 02
+import java.util.Scanner;
+
+public class t02 {
+    public static void main(String[] args) {
+        Scanner cg = new Scanner(System.in);
+
+        System.out.println("Enter the numerical score: ");//prompt
+        int score = cg.nextInt();
+
+        String grade;
+
+        if (score >= 90 && score <= 100) {
+            grade = "A";
+        } else if (score >= 85 && score <= 89) {
+            grade = "A-";
+        } else if (score >= 70 && score <= 84) {
+            grade = "B";
+        } else if (score >= 57 && score <= 69) {
+            grade = "C";
+        } else if (score >= 50 && score <= 56) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        System.out.println("Your grade is: " + grade);//output
+        
+    }
+}
+
+
+
+
+//task 03
+public class t03 {
+    public static void main(String[] args) {
+        
+
+// Example 3      
+        int num3 = 105; //can be replaced with any test input
+        
+    // checking divisibility
+        if (num3 % 5 == 0 && num3 % 7 == 0) {
+            System.out.println("Divisible by Both");//output
+
+        } else if (num3 % 5 == 0) {
+            System.out.println("Invalid: Divisible by 5 Only");//output
+
+        } else if (num3 % 7 == 0) {
+            System.out.println("Invalid: Divisible by 7 Only");//output
+
+        } else {
+            System.out.println("NO");//output
+        }
+    }
+}
+
+
+// Task 04
+public class t04 {
+    public static void main(String[] args) {
+
+        // Example 1
+        int year1 = 2020;//can be replaced with any test input
+
+        // determining if a year is a leap year
+        if (year1 % 4 == 0) { // condition start
+          
+          
+            if (year1 % 100 == 0) { // branch start
+              
+              
+                if (year1 % 400 == 0) { // sub branch start
+                    System.out.println(year1 + " is a leap year");//output
+                    
+                } else { // sub branch close
+                    System.out.println(year1 + " is not a leap year");//output
+                }
+                
+                
+            } else { // branch close
+                System.out.println(year1 + " is a leap year");//output
+            }
+            
+            
+        } else { // condition close
+            System.out.println(year1 + " is not a leap year");//output
+        }
+    }
+}
+
+
+
+
+//task05
+public class t05 {
+    public static void main(String[] args) {
+        // Example 1
+        int num1 = 5; ////can be replaced with any test input
+
+        
+        
+    // checking the classification of the number
+    
+        if (num1 < 0) {
+            System.out.println("the given number is negative");//output
+            
+            
+        } else if (num1 == 0) {
+            System.out.println("the given number is zero");//output
+            
+            
+        } else if (num1 > 0 && num1 % 2 == 0) {
+            System.out.println("the given number is positive and even");//output
+            
+            
+        } else {
+            System.out.println("the given number is positive and odd");//output
+        }
+    }
+}
+
+
+//task 06
+
+public class t06 {
+    public static void main(String[] args) {
+       //exmaple 1 
+      int x =-3;//can be replaced with any test input
+
+    
+//evaluating the function
+   
+        if (x < 0) {
+            System.out.println("f("+x+")="+(2*x));//output
+            
+        } else if (x >= 0 && x < 2) {
+            System.out.println("f("+x+")="+(x+1));//output
+            
+        } else if (x >= 2 && x < 5) {
+            System.out.println("f("+x+")="+(x * x - 1));//output
+            
+        } else {
+            System.out.println("f("+x+")="+(3 * x * x + 2));//output
+        }
+    }
+}
+
+
+
+
+//task 07
+public class t07 {
+    public static void main(String[] args) {
+        // Example 1
+        int payment1 = 9000;//can be replaced with any test input
+        int age1 = 23;//can be replaced with any test input
+       
+       
+    // calculating tax according to age
+        if (age1 < 18) {
+            System.out.println("You are just a child!!!Your tax amounts in 0 Tk");
+            
+        } else if (payment1 < 10000) {
+            System.out.println("Your tax amounts in 0 Tk");
+            
+        } else if (payment1 <= 20000) {
+                        System.out.println("Your tax amounts in " + payment1* 0.05 + " Tk");// 5% tax//output
+
+        } else {
+                       System.out.println("Your tax amounts in " + payment1 * 0.10 + " Tk");// 10% tax
+        }
+    }
+}
+
+
+
+//task 08
+public class t08 {
+    public static void main(String[] args) {
+        // example 1
+        float num1 = 18.83f; //can be replaced with any test input
+
+        float num2 = -4.02f;//can be replaced with any test input
+
+        float num3 = 83.12f;//can be replaced with any test input
+
+
+        // finding the maximum number 
+        float max;
+        if (num1 >= num2 && num1 >= num3) {
+            max = num1;
+        } else if (num2 >= num1 && num2 >= num3) {
+            max = num2;
+        } else {
+            max = num3;
+        }
+
+        // finding the minimum number 
+        float min;
+        if (num1 <= num2 && num1 <= num3) {
+            min = num1;
+        } else if (num2 <= num1 && num2 <= num3) {
+            min = num2;
+        } else {
+            min = num3;
+        }
+
+        
+        System.out.println("Maximum number is " + max);//output
+        
+        System.out.println("Minimum number is " + min);//output
+    }
+}
+
+
+
+
+//task09
+public class t09 {
+  public static void main(String[] args){
+       
+
+        // example 1
+        
+        int side1 = 5;//can be replaced with any test input
+
+        
+        int side2 = 2;//can be replaced with any test input
+
+        
+        int side3 = 4;//can be replaced with any test input
+
+
+        //type of triangle
+        
+        if (side1 == side2 && side2 == side3) {
+          
+            System.out.println("This is an Equilateral triangle");//output
+        } else if (side1 == side2 || side2 == side3 || side1 == side3) {
+          
+            System.out.println("This is an Isosceles triangle");//output
+        } else {
+          
+          
+            System.out.println("This is a Scalene triangle");//output
+        }
+    }
+}
+
+
+
+//task 10
+public class t10 {
+    public static void main(String[] args) {
+      System.out.println("SWAPNO");
+        int pay = 70; // payable 70tk
+        int tp = 500;  // total paid 500 tk
+
+        if (tp > pay) {
+            int rem = tp - pay;//rem means remaining
+            int note100 = rem / 100;  // 4
+            int rem1 = rem % 100;        // 30
+            int note50 = rem1 / 50;    // 0
+            int rem2 = rem1 % 50;        // 30
+            int note20 = rem2 / 20;    // 1
+            int rem3 = rem2 % 20;        // 10
+            int note10 = rem3 / 10;    // 1
+            int rem4 = rem3 % 10;        // 0
+            int coin5 = rem4 / 5;      // 0
+            int rem5 = rem4 % 5;         // 0
+            int coin2 = rem5 / 2;      // 0
+            int rem6 = rem5 % 2;         // 0
+            int coin1 = rem6 / 1;      // 0
+
+            // output
+            System.out.println("100 taka note: " + note100);
+            System.out.println("50 taka note: " + note50);
+            System.out.println("20 taka note: " + note20);
+            System.out.println("10 taka note: " + note10);
+            System.out.println("5 taka coin: " + coin5);
+            System.out.println("2 taka coin: " + coin2);
+            System.out.println("1 taka coin: " + coin1);
+        } else {
+            if (tp == pay) {
+                System.out.println("The returned amount is 0 taka.");
+            } else {
+                System.out.println("Please pay"+(pay-tp) +"taka more");
+            }
+        }
+    }
+}
+
+
+
+//task11
+public class t11 {
+    public static void main(String[]args){
+        
+
+        // example 1
+        
+        int num1 = 2345;//can be replaced with any test input
+
+       
+        int num2 = 2452;//can be replaced with any test input
+       
+        int num3 = 4532;//can be replaced with any test input
+
+        // relation between 3 numbers
+        if (num1 == num2 && num2 == num3) {
+          
+            System.out.println("All numbers are equal");//output
+        } else if (num1 != num2 && num2 != num3 && num1 != num3) {
+          
+            System.out.println("All numbers are different");//output
+        } else {
+          
+            System.out.println("Neither all are equal nor different");//output
+        }
+    }
+}

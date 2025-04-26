@@ -1,0 +1,446 @@
+//task 01
+import java.util.Scanner;
+public class t01{
+  public static void main(String [] args){
+    
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    
+    
+    for(int columnNum=1;columnNum<=numb;columnNum++){
+      System.out.print(columnNum);
+    }
+    System.out.println();
+  }
+}
+
+
+
+
+//task 02
+import java.util.Scanner;
+public class t02{
+  public static void main(String [] args){
+    
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+//for row
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      //for column
+      for(int columnNum=1;columnNum<=numb;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+
+//task 03
+import java.util.Scanner;
+public class t03{
+  
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+ //for row   
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+    //for column  
+      for(int columnNum=1;columnNum<=rowCount;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+
+//task 04
+import java.util.Scanner;
+public class t04{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    //for row
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      //for space
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      //for numbers
+      for(int columnNum=numb-rowCount+1;columnNum<=numb;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+//task 05
+import java.util.Scanner;
+public class t05{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    //for row
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      //for space
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      //for numbers
+      for(int columnNum=1;columnNum<=2*rowCount-1;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+//task 06
+import java.util.Scanner;
+public class t06{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    //for upper with midline
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      for(int columnNum=1;columnNum<=2*rowCount-1;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+    
+    
+    
+    //for lower
+    for(int rowCount=1;rowCount<=numb-1;rowCount++){
+      for(int spaceCount=1;spaceCount<=rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      for(int columnNum=1;columnNum<=2*(numb-rowCount)-1;columnNum++){
+        System.out.print(columnNum);
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+//task 07
+import java.util.Scanner;
+public class t07{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb1 = sca.nextInt();
+    int numb2 = sca.nextInt();
+    
+    for(int rowCount=1;rowCount<=numb2;rowCount++){
+      
+      for(int columnNum=1;columnNum<=numb1;columnNum++){
+        
+        if(rowCount==1||rowCount==numb2||columnNum==1||columnNum==numb1){
+          System.out.print(columnNum);
+        }
+        //for creating a hollow
+        else{
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+//task 08
+import java.util.Scanner;
+public class t08{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      
+      for(int columnNum=1;columnNum<=rowCount;columnNum++){
+        
+        if(rowCount==1||rowCount==numb||columnNum==rowCount||columnNum==1){
+          System.out.print(columnNum);
+        }
+        else{
+          //for creating a hollow
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+//task 09
+import java.util.Scanner;
+public class t09{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      
+      for(int columnNum=numb-rowCount+1;columnNum<=numb;columnNum++){
+        
+        if(rowCount==1||rowCount==numb||columnNum==numb-rowCount+1||columnNum==numb){
+          System.out.print(columnNum);
+        }
+        else{
+          //for creating a hollow
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+//task 10
+import java.util.Scanner;
+public class t10{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      
+      
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      for(int columnNum=1;columnNum<=2*rowCount-1;columnNum++){
+        
+        
+        if(rowCount==1||rowCount==numb||columnNum==1||columnNum==2*rowCount-1){
+          System.out.print(columnNum);
+        }
+        else{
+          //for creating a hollow
+          System.out.print(" "); 
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+
+//task 11
+import java.util.Scanner;
+public class t11{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    
+    //for upper with midline
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      for(int columnNum=1;columnNum<=2*rowCount-1;columnNum++){
+        
+        if(rowCount==1||columnNum==1||columnNum==2*rowCount-1){
+          System.out.print(columnNum);
+        }
+        else{
+          //for creating a hollow
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+    
+    //for lower 
+    for(int rowCount=1;rowCount<=numb-1;rowCount++){
+      for(int spaceCount=1;spaceCount<=rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      for(int columnNum=1;columnNum<=2*(numb-rowCount)-1;columnNum++){
+        
+        if(rowCount==numb-1||columnNum==1||columnNum==2*(numb-rowCount)-1){
+          System.out.print(columnNum);
+        }
+        else{
+          //for creating a hollow
+          System.out.print(" ");
+        }
+      }
+      System.out.println();
+    }
+  }
+}
+
+
+
+
+
+
+//task 12
+import java.util.Scanner;
+public class t12{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    for(int original=1;original<=numb;original++){
+      System.out.print(original);
+    }
+    //reverse loop
+    for(int reversed=numb-1;reversed>=1;reversed--){
+      System.out.print(reversed);
+    }
+    
+  }
+}
+
+
+
+
+
+//task 13
+import java.util.Scanner;
+public class t13{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      
+      //space
+      for(int spaceCount=1;spaceCount<=numb-rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+      
+      for(int original=1;original<=rowCount;original++){
+        System.out.print(original);
+      }
+      //reverse loop
+      for(int reversed=rowCount-1;reversed>=1;reversed--){
+        System.out.print(reversed);
+      }
+      System.out.println();
+    }
+    
+  }
+}
+
+
+
+
+
+
+
+//task 14
+import java.util.Scanner;
+public class t14{
+  public static void main(String [] args){
+    Scanner sca = new Scanner (System.in);
+    int numb = sca.nextInt();
+    
+    for(int rowCount=1;rowCount<=numb;rowCount++){
+      
+      for(int spaceCount=1;spaceCount<=rowCount;spaceCount++){
+        System.out.print(" ");
+      }
+
+    for(int original=1;original<=numb-rowCount+1;original++){
+      System.out.print(original);
+    }
+      for(int reversed=numb-rowCount;reversed>=1;reversed--){
+        System.out.print(reversed);
+      }
+      System.out.println();
+    }
+    
+  }
+}
+
+
+
+
+
+
+//task 15
+import java.util.Scanner;
+
+public class t15 {
+    public static void main(String[] args) {
+        Scanner sca = new Scanner(System.in);
+        int numb = sca.nextInt();
+        int half = numb/2;
+        
+        //for upper with midline
+        for (int rowCount=0;rowCount<=half;rowCount++) {
+          for (int spaceCount = 1; spaceCount <= rowCount; spaceCount++) {
+                System.out.print(" ");
+            }
+
+            for (int columnNum=1;columnNum<=numb-2*rowCount;columnNum++) {
+                System.out.print(columnNum);
+            }
+            System.out.println();
+        }
+
+        
+        //for lower
+        for (int rowCount=half-1;rowCount>=0;rowCount--) {
+          for (int spaceCount = 1; spaceCount <=rowCount; spaceCount++) {
+                System.out.print(" ");
+          }
+            for (int columnNum=1;columnNum<=numb-2*rowCount;columnNum++) {
+                System.out.print(columnNum);
+            }
+            System.out.println();
+        }
+    }
+    }
+
+    
+      
+    
+
+
+
+
+

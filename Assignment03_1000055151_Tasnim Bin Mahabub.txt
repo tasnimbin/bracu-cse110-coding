@@ -1,0 +1,614 @@
+//task01
+public class t01{
+  public static void main(String[] args){
+    
+    
+    // using for loop
+    //sequence a
+    //a)  24,18,12,6,0,-6
+    System.out.print("a)");
+    for(int i=24;i>=-6;i-=6){ //-6
+      System.out.print(i + ",");
+      
+    }
+    System.out.println();
+    
+    
+    // using while loop
+    //sequence b
+    //b)  18,-27,36,-45,54,-63
+    System.out.print("b)");
+    int sign=1;//for alternating the sign
+    int j=18;
+    while(j<=63){
+      System.out.print(sign*j+ ",");
+        j+=9;  //+9
+        sign*=-1;
+    }
+  }
+}
+    
+
+
+//task 2
+
+import java.util.Scanner;
+
+public class t02 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+       
+        
+        
+        
+    System.out.print("Enter the number of inputs:");
+    int n= sc.nextInt();
+    double sum=0;
+    
+    
+    
+    //loop
+      for(int i=1;i<=n;i+=1){
+      
+     System.out.print("Enter "+i+"th number input:");   
+      int num= sc.nextInt();
+      sum +=num;      //this will add all input to the "sum" variable
+    }
+      
+      //output
+    System.out.println("The summation of given "+n+" numbers is: " +sum);
+    System.out.println("The average of given "+n+" numbers is: " +(sum/n));
+    }
+}
+
+
+
+//task3
+
+public class t03{
+  public static void main(String[] args){
+    
+    int sum =0;
+    
+    
+    for(int i=0;i<=600;i+=1){
+      
+      if(i%63==0){  //multiples of both 7 and 9 means multiples of 63
+        sum+=i;   //this will add all value to the "sum" variable
+    }
+    }
+    
+    
+    System.out.println("Summation of all numbers that are multiples of both 7 and 9 up to 600 is: "+sum);
+  }
+}
+      
+
+
+//task4
+
+public class t04{
+  public static void main(String[] args){
+    
+    int sum =0;
+    
+    
+    for(int i=0;i<=600;i+=1){
+      
+      if(i%7==0 || i%9==0){  //using ||(or) will ensure that numbers like 63 are added only once in the sum
+        sum+=i;   //this will add all value to the "sum" variable
+    }
+    }
+    
+    
+    System.out.println("Summation of all numbers that are multiples of either 7 or 9 or both up to 600 is: "+sum);
+  }
+}
+
+
+
+
+//task5
+
+public class t05{
+  public static void main(String[] args){
+    
+    int sum =0;
+    
+    
+    for(int i=0;i<=600;i+=1){
+      
+      if((i%7==0 || i%9==0)  && !(i % 7 == 0 && i % 9 == 0)){ 
+        //!(i % 7 == 0 && i % 9 == 0) condition ensures that the sum excludes numbers that are multiples of both 7 and 9
+        
+        sum+=i;   //this will add all value to the "sum" variable
+    }
+    }
+    
+    
+    System.out.println("Summation of all numbers that are multiples of either 7 or 9 but not both, up to 600 is: "+sum);
+  }
+}
+
+
+
+
+//task06
+
+
+import java.util.Scanner;
+
+public class t06 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        System.out.print("Enter the value of 'n': ");
+        int n = sc.nextInt();
+
+        int y = 0; 
+        
+        //loop
+        for (int i = 1; i <= n; i+=1) {
+          
+          
+            if (i % 2 == 0) {  //when even
+                y -= i * i; 
+                
+            } else {
+                y += i * i;   //when odd
+            }
+        }
+
+ 
+        System.out.println("The value of y is: " + y);
+
+
+    }
+}
+
+
+
+
+//task7
+
+
+  import java.util.Scanner;
+public class t7{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    
+    System.out.println("Enter an integer:  ");//prompt
+    int numb = sc.nextInt();
+    
+    if(numb<=0){
+      System.out.println("It is not an positive integer");
+    }
+    
+    
+    //loop
+    for(int i=0;i<=numb;i++){
+      if(i%5==0&&i%3!=0){
+        System.out.println(i);
+      }
+    }//loop ends
+  }
+  
+}
+
+
+
+
+
+//task08
+
+
+import java.util.Scanner;
+
+public class t08 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        //infinite loop
+        while (true) {
+          System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+         int sq =  n * n;
+          System.out.println("The square of this number is: "+sq);
+          
+          
+          if(n<0){
+                  break; //break
+                  }
+          
+        }
+           
+
+    }
+}
+
+
+
+//task09
+
+import java.util.Scanner;
+
+public class t09{
+  public static void main(String[] args){
+    Scanner sc =new Scanner(System.in);
+    
+    System.out.println("Number of inputs: ");
+    int n = sc.nextInt();
+    int nonNegative =0;
+      int negative=0;
+    //loop
+    for(int i=1;i<=n;i+=1){
+      System.out.println("Enter a number: ");
+      int num = sc.nextInt();
+      
+      //condition
+      if (num>=0){
+        nonNegative+=1;
+        
+      }else{ 
+        negative+=1;
+        
+      }
+    }
+    //output
+    System.out.println(nonNegative+" Non-negative numbers");
+    System.out.println(negative+" negative numbers");
+  }
+}
+        
+        
+
+
+
+//task10
+
+import java.util.Scanner;
+
+public class t10{
+  public static void main(String[] args){
+    Scanner sc =new Scanner(System.in);
+    
+    
+    
+    System.out.println("Input number of terms: ");
+    int n = sc.nextInt();
+    
+    
+    
+    int sum =0;
+    int odd=1;
+    int i =0;
+    while(i<n){
+       
+      
+      
+      
+       sum += odd;  //this will add all odd value to the "sum" variable
+      odd+=2;     //diff between two odd number is 2
+      i+=1;
+     
+        
+      
+     
+   }
+    
+    System.out.println("The Sum of odd Natural Numbers up to "+n+" terms is: "+sum );
+  }
+}
+      
+
+
+
+
+//task11
+
+import java.util.Scanner;
+
+
+public class t11{
+  
+  
+  public static void main(String[] args){
+    
+    
+    
+    
+    
+    
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    int sum=0;
+    
+    
+    for(int i=1;i<=10;i++){
+      
+      
+      System.out.println("Enter "+i+" th number: ");//prompt
+      int numb = sc.nextInt();
+      
+      
+      
+      sum+=numb;    //this will add all value to the "sum" variable
+    System.out.println("Summation up to "+i+" th number is: "+sum);
+    }
+  }
+}
+    
+    
+
+
+
+
+
+
+//task12
+
+import java.util.Scanner;
+public class t12{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    System.out.println("Enter an integar: ");//prompt
+    int n = sc.nextInt();
+    
+
+    
+    System.out.println("Divisors of "+n+" :");
+    
+    
+    
+    
+    
+    for(int i=1;i<=n;i++){ //a numbers divisor cant be greater than the number
+      
+      if(n%i==0){   //will check by modding with every number from 1 to n
+      int div=i;    //if the condition is true it will store the value and print later
+      
+        
+      System.out.println(div);
+      
+      
+      
+      
+      
+    
+    }
+  }
+}
+}
+    
+    
+
+
+
+
+
+//task13
+
+import java.util.Scanner;
+public class t13{
+public static void main(String[] args){
+Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    System.out.println("Enter an integar: ");//prompt
+    int n = sc.nextInt();
+     
+
+    
+    int digit=0;
+    
+    
+    
+    
+    
+    while(n!=0){
+      
+      n/=10;  
+      digit+=1;    //till the condition is true it will increase by one
+      
+        
+      
+      
+      
+      
+      
+
+    
+  }
+    System.out.println("Total digits: "+digit);
+}
+}
+    
+    
+
+
+
+//task14
+
+
+  import java.util.Scanner;
+public class t14{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    
+    System.out.println("Enter an integer:  ");//prompt
+    int numb = sc.nextInt();
+    
+    
+    
+    
+    
+    while(true){
+      int lastDigit=numb%10;  
+      System.out.print(lastDigit+",");
+      
+      
+      
+      
+      numb/=10; //the last digit will be gone and new value will be stoerd in the "numb" variable
+        if(numb==0){
+        break;
+      }
+    }
+    
+    
+    
+    
+    
+    System.out.println();
+  }
+}
+
+
+
+
+
+
+//task15
+
+
+  import java.util.Scanner;
+public class t15{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    
+    System.out.println("Enter an integer:  ");//prompt
+    int numb = sc.nextInt();
+    int reversed =0;
+    
+    
+    
+    // making the number reverse
+    while(true){
+      int lastDigit=numb%10;
+      reversed*=10;  
+      reversed+=lastDigit;
+      //example:55 is 5*10+5
+      numb/=10; //the last digit will be gone and new value will be stoerd in the "numb" variable
+        if(numb==0){
+        break;
+      
+      
+      
+      
+     
+      }
+        //printing the reverse number in reverse to get the actual number one by one 
+    }while(true){
+      int firstDigit=reversed%10;  
+      System.out.print(firstDigit+",");
+      reversed/=10; //the last digit will be gone and new value will be stoerd in the "reversed" variable
+        if( reversed==0){
+        break;
+      
+      
+      
+     
+      }
+    }
+
+    
+
+    
+    
+    
+    System.out.println();
+  }
+}
+
+
+
+
+
+
+//task16
+
+
+  import java.util.Scanner;
+public class t16{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    
+    
+    
+    
+    
+    System.out.println("Enter an integer:  ");//prompt
+    int numb = sc.nextInt();
+    
+    
+    //prime number
+    boolean prime=true;
+    
+    for(int i=2;i<numb;i++){
+      
+      if(numb%i==0){
+        prime=false;
+        break;
+      }
+    }//loop ends
+    
+        if(prime==true){
+        System.out.println(numb+" is a prime number");
+        }else{
+        
+        System.out.println(numb+" is not a prime number");
+        
+        }
+        
+        
+        
+        //perfect number
+    int sum=0;
+    
+    for(int j=1;j<numb;j++){
+      
+      if(numb%j==0){
+        sum+=j;
+       
+      }
+    }//loop ends
+    
+        if(sum==numb){
+        System.out.println(numb+" is a perfect number");
+        }else{
+        
+        System.out.println(numb+" is not a perfect number");
+        
+        }
+  }
+}
+      
+
+
+
+
+
+
